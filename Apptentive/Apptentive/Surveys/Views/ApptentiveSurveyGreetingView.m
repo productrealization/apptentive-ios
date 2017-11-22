@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation ApptentiveSurveyGreetingView
 
 - (void)awakeFromNib {
+    self.infoButton.hidden = YES;
 	self.borderViewHeight.constant = 1.0 / [UIScreen mainScreen].scale;
 
 	self.greetingLabel.numberOfLines = 0;
