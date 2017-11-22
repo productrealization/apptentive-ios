@@ -88,6 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(adjustForKeyboard:) name:UIKeyboardWillHideNotification object:nil];
 
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sizeDidUpdate:) name:UIContentSizeCategoryDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(close:) name:UIApplicationDidEnterBackgroundNotification object:nil];
 
 	id<ApptentiveStyle> style = self.viewModel.styleSheet;
 
