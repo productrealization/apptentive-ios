@@ -39,6 +39,11 @@ NSString *const ATInteractionNavigateToLinkEventLabelNavigate = @"navigate";
 			if (!openedURL) {
 				ApptentiveLogError(@"Could not open URL: %@", url);
 			}
+            else
+            {
+                [[NSNotificationCenter defaultCenter] postNotificationName:ApptentiveNavigateToLinkEventNotification
+                                                                    object:url];
+            }
 		} else {
 			ApptentiveLogError(@"No application can open the Interaction's URL: %@", url);
 		}

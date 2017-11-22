@@ -64,6 +64,9 @@ typedef void (^ApptentiveAuthenticationFailureCallback)(ApptentiveAuthentication
 /** Notification sent when Message Center unread messages count changes. */
 extern NSNotificationName const ApptentiveMessageCenterUnreadCountChangedNotification;
 
+/** Notification sent when a navigate to link event is dispatched. */
+extern NSNotificationName const ApptentiveNavigateToLinkEventNotification;
+
 /** Notification sent when the user has agreed to rate the application. */
 extern NSNotificationName const ApptentiveAppRatingFlowUserAgreedToRateAppNotification;
 

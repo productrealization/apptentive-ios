@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 NSNotificationName const ApptentiveMessageCenterUnreadCountChangedNotification = @"ApptentiveMessageCenterUnreadCountChangedNotification";
 
+NSNotificationName const ApptentiveNavigateToLinkEventNotification = @"ApptentiveNavigateToLinkEventNotification";
 NSNotificationName const ApptentiveAppRatingFlowUserAgreedToRateAppNotification = @"ApptentiveAppRatingFlowUserAgreedToRateAppNotification";
 
 NSNotificationName const ApptentiveSurveyShownNotification = @"ApptentiveSurveyShownNotification";
