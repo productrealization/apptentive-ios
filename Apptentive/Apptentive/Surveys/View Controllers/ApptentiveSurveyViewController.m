@@ -682,7 +682,10 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)maybeAnimateOtherSizeChangeAtIndexPath:(NSIndexPath *)indexPath {
-	if ([self.viewModel typeOfAnswerAtIndexPath:indexPath] == ApptentiveSurveyAnswerTypeOther) {
+    ApptentiveSurveyAnswerType answerType = [self.viewModel typeOfAnswerAtIndexPath:indexPath];
+
+    if (answerType == ApptentiveSurveyAnswerTypeOther)
+    {
 		BOOL showing = [self.viewModel answerIsSelectedAtIndexPath:indexPath];
 		[UIView animateWithDuration:0.25 animations:^{
 			[self.collectionViewLayout invalidateLayout];
@@ -700,6 +703,10 @@ NS_ASSUME_NONNULL_BEGIN
 			}
 		}];
 	}
+    else if (answerType == ApptentiveSurveyAnswerTypeChoice)
+    {
+        [self.view endEditing:YES];
+    }
 }
 
 @end
