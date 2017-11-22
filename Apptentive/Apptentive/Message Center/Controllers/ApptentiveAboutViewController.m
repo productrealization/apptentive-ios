@@ -35,6 +35,12 @@ NSString *const ATInteractionAboutViewEventLabelClose = @"close";
 
 @implementation ApptentiveAboutViewController
 
+// as from ios9 is recommended to used status bar defined for each controller, we must set preferredStatusBarStyle to light style (white), otherwise would be default style (black)
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (NSString *)codePointForEvent:(NSString *)event {
 	return [ApptentiveBackend codePointForVendor:ATEngagementCodePointApptentiveVendorKey interactionType:ATInteractionAboutViewInteractionKey event:event];
 }

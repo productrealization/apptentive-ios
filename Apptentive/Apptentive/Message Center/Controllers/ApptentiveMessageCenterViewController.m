@@ -104,6 +104,12 @@ typedef NS_ENUM(NSInteger, ATMessageCenterState) {
 
 @implementation ApptentiveMessageCenterViewController
 
+// as from ios9 is recommended to used status bar defined for each controller, we must set preferredStatusBarStyle to light style (white), otherwise would be default style (black)
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
