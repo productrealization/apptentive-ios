@@ -76,6 +76,12 @@ extern NSNotificationName const ApptentiveSurveyShownNotification;
 /** Notification sent when a survey is submitted by the user. */
 extern NSNotificationName const ApptentiveSurveySentNotification;
 
+/** Notification sent when a survey is about to be shown. */
+extern NSNotificationName const ApptentiveSurveyWillBeShownNotification;
+
+/** Notification sent when a survey is about to disappear. */
+extern NSNotificationName const ApptentiveSurveyWillDisappearNotification;
+
 /** Error domain for the Apptentive SDK */
 extern NSString *const ApptentiveErrorDomain;
 
