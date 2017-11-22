@@ -38,6 +38,8 @@
 #define RANGE_FOOTER_VERTICAL_MARGIN 8
 #define RANGE_MINIMUM_WIDTH 27
 
+static const NSInteger kCharacterLimit = 160;
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -596,6 +598,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
 	[self.viewModel commitChangeAtIndexPath:[self.viewModel indexPathForTextFieldTag:textField.tag]];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    return textView.text.length + (text.length - range.length) <= kCharacterLimit;
 }
 
 #pragma mark - View model delegate
