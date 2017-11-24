@@ -9,7 +9,7 @@
 * Our customizations are stored in branch `tmo-app-customizations`
 
 ## HOWTO
-### How to use this apptentive-ios-tmo in my app
+### How to use apptentive-ios-tmo in my app
 1. Setup CocoaPods for your project
 2. Put `source 'https://github.com/productrealization/tmo-app-pod-specs.git'` at the top of your Podfile
 3. Add `pod 'apptentive-ios-tmo', TMOApptentiveVersion` to your target in your Podfile (TMOApptentiveVersion must be defined e.g. `TMOApptentiveVersion = '4.0.7.1'`)
