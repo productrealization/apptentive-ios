@@ -5,7 +5,7 @@
 
 * T-Mobile customized version of Apptentive SDK is maintained as Cocoa Pod named __apptentive-ios-tmo__.
 * Spec for __apptentive-ios-tmo__ is stored at https://github.com/productrealization/tmo-app-pod-specs
-* Apptentive versions it's SDK with a 3 number format (e.g. 4.0.7) so we version it by adding fourth number (e.g. 4.0.7.1). This way we know which apptentive-ios version our release is based on.
+* Apptentive versions its SDK with a 3 number format (e.g. 4.0.7) so we version our releases by adding fourth number (e.g. 4.0.7.1). This way we know which apptentive-ios version our release is based on.
 * Our customizations are stored in branch `tmo-app-customizations`
 
 ## HOWTO
@@ -19,7 +19,7 @@
 ### How to upgrade apptentive-ios-tmo with latest changes from upstream apptentive-ios
 1. For convenience `git remote add upstream https://github.com/apptentive/apptentive-ios`
 2. Pull master from upstream (github.com/apptentive/apptentive-ios)
-3. Now you need to apply `tmo-app-customizations` branch no top of master. There are many options to do that.
+3. Now you need to apply `tmo-app-customizations` branch on top of `master`. There are many options to do that.
  * You can merge `master` branch to `tmo-app-customizations` 
  * You can rebase `tmo-app-customizations` on top of `master` but be aware that this will re-write history
  * You can cherry-pick commits from `tmo-app-customizations` to some new branch.
